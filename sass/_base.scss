@@ -1,8 +1,17 @@
 * {
   list-style-type: none !important;
-  padding: 0;
-  margin: 0;
+}
+body {
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #666666;
+  height: 3000px;
 }
 a {
-  text-decoration: none !important;
+  color: #233645;
+  &:hover {
+    text-decoration: none;
+    color: #233645;
+  }
 }
