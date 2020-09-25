@@ -16,4 +16,7 @@ $(function () {
     }
   }
   drophover();
+  function banner() {
+  }
+  banner();
 });
