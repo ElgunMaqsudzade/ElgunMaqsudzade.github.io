@@ -9,7 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -196,44 +196,57 @@
         </div>
       </div>
     </nav>
+    <!-- header carousel starts -->
     <header>
       <div
-        id="carouselExampleControls"
+        id="myCarousel"
         class="carousel slide carousel-fade"
         data-ride="carousel"
       >
         <div class="carousel-inner">
-          <div
-            class="carousel-item active item"
-            style="background-image: url(images/Home-Head-Carousel/1.jpg)"
-          >
-            <div class="container">
-              <div class="table-words">
-                <div class="row">
-                  <div class="col-9">
-                    <h4>Good Doctor, Healthy Life</h4>
-                    <h2>Meet the <br /><strong>Best Doctors</strong></h2>
-                    <a class="discover-button" href="#"
-                      ><i class="fas fa-angle-right"></i>Discover More</a
-                    >
+          <div class="carousel-item active">
+            <div class="img-box">
+              <img
+                src="images/Home-Head-Carousel/1.jpg"
+                class="d-block img-fluid"
+                alt="..."
+              />
+            </div>
+            <div class="banner-box">
+              <div class="banner-words w-100">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-9">
+                      <h4>Good Doctor, Healthy Life</h4>
+                      <h2>Meet the <br /><strong>Best Doctors</strong></h2>
+                      <a class="discover-button" href="#"
+                        ><i class="fas fa-angle-right"></i>Discover More</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="carousel-item item"
-            style="background-image: url(images/Home-Head-Carousel/2.jpg)"
-          >
-            <div class="container">
-              <div class="table-words">
-                <div class="row">
-                  <div class="col-9">
-                    <h4>Best Institution, Good Services</h4>
-                    <h2>Meet the <br /><strong>Best Hospital</strong></h2>
-                    <a class="discover-button" href="#"
-                      ><i class="fas fa-angle-right"></i>Discover More</a
-                    >
+          <div class="carousel-item">
+            <div class="img-box">
+              <img
+                src="images/Home-Head-Carousel/2.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="banner-box">
+              <div class="banner-words w-100">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-9">
+                      <h4>Best Institution, Good Services</h4>
+                      <h2>Meet the <br /><strong>Best Hospital</strong></h2>
+                      <a class="discover-button" href="#"
+                        ><i class="fas fa-angle-right"></i>Discover More</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
@@ -242,7 +255,7 @@
         </div>
         <a
           class="carousel-control-prev"
-          href="#carouselExampleControls"
+          href="#myCarousel"
           role="button"
           data-slide="prev"
         >
@@ -251,7 +264,7 @@
         </a>
         <a
           class="carousel-control-next"
-          href="#carouselExampleControls"
+          href="#myCarousel"
           role="button"
           data-slide="next"
         >
@@ -260,10 +273,140 @@
         </a>
       </div>
     </header>
+    <!-- header carousel ends -->
+    <!-- emergency section starts -->
+    <section class="emergency">
+      <div class="container">
+        <div class="row">
+          <!-- first card starts-->
+          <div class="col-4">
+            <div class="emergency-card">
+              <div class="icon-holder"><i class="fas fa-ambulance"></i></div>
+              <div class="text-holder text-center">
+                <h4>Emergency Case</h4>
+                <p>
+                  Few preferred continual sir led incommode neglected.
+                  Discovered too old insensible collecting unpleasant.
+                </p>
+              </div>
+              <div class="number">
+                <ul class="d-flex px-5 justify-content-between">
+                  <li>Phone</li>
+                  <li><span>(+987)98765432</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- first card ends -->
+          <!-- second card starts  -->
+          <div class="col-4">
+            <div class="img-holder">
+              <img class="img-fluid" src="images/Emergency-card/1.png" alt="" />
+            </div>
+          </div>
+          <!-- second card ends -->
+          <!-- third card starts -->
+          <div class="col-4">
+            <div class="emergency-card">
+              <div class="icon-holder"><i class="fas fa-ribbon"></i></div>
+              <div class="text-holder text-center">
+                <h4>Cancer Care</h4>
+                <p>
+                  Few preferred continual sir led incommode neglected.
+                  Discovered too old insensible collecting unpleasant.
+                </p>
+              </div>
+              <div class="number">
+                <ul class="d-flex px-5 justify-content-between">
+                  <li>Phone</li>
+                  <li><span>(+987)98765432</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- third card ends -->
+        </div>
+      </div>
+    </section>
+    <!-- about section starts -->
+    <section class="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="img-box">
+              <img class="img-fluid" src="images/About/2.jpg" alt="" />
+              <div class="video-box">
+                <div class="video">
+                  <a
+                    href="https://www.youtube.com/watch?v=5vY-D42NFP4"
+                    class="popup-youtube icon-box play-button"
+                  >
+                    <i class="fa fa-play"></i>
+                  </a>
+                </div>
+                <div class="btn-content">
+                  <h5>Let’s See Our Intro Video</h5>
+                  <p>
+                    If your smile is not becoming to you, then you should be
+                    coming.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6" style="padding-left: 35px">
+            <div class="about-content">
+              <h5>HAS BEEN WORKING SINCE 2000</h5>
+              <h2>
+                A Great Place to Work. A Great Place to <strong>Receive Care</strong>.
+                Leading Medicine.
+              </h2>
+              <p>
+                Pursuit chamber as elderly amongst on. Distant however warrant
+                farther to of. My justice wishing prudent waiting in be. Who
+                decisively attachment has dispatched. Fruit defer in party me
+                built under first. Forbade him but savings sending ham general.
+              </p>
+            </div>
+            <div class="offers">
+              <div class="row">
+                <div class="col-6">
+                  <div class="d-flex align-items-center">
+                    <div class="icon">
+                      <i class="far fa-calendar-plus"></i>
+                    </div>
+                    <a href="#">Online Appoinment</a>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="d-flex align-items-center">
+                    <div class="icon"><i class="fas fa-pills"></i></div>
+                    <a href="#">Health Queries</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="appointment-btn"
+              ><i class="fas fa-angle-right"></i>Make Appointment</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section ends -->
+    <!-- services section starts -->
+    <section class="services">
+      <div class="container">
+        <div class="row">
+          <div class="services-content"></div>
+          <div class="carousel"></div>
+        </div>
+      </div>
+    </section>
 
     <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
     <script
@@ -276,11 +419,7 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"
-    ></script>
+
     <script src="js/main.js"></script>
   </body>
 </html>

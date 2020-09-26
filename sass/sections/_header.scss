@@ -1,78 +1,67 @@
 header {
   .carousel-inner {
     .carousel-item {
-      display: flex;
-      align-items: center;
-      .table-words {
-        h4 {
-          color: white;
-          text-transform: capitalize;
-          font-weight: 600;
-          margin-bottom: 25px;
-        }
-        h2 {
-          color: white;
-          font-weight: 300;
-          font-size: 80px;
-          line-height: 1;
-          margin-bottom: 25px;
-          strong {
-            font-weight: 900;
-          }
-        }
-        .discover-button {
-          padding: 15px 25px;
-          display: inline-block;
-          font-family: Inter, sans-serif;
-          font-weight: 700;
-          text-transform: capitalize;
-          transition: all 0.35s ease-in-out;
-          overflow: hidden;
-          border-radius: 5px;
-          font-size: 17px;
-          margin-top: 15px;
-          margin-right: 5px;
-          background: linear-gradient(
-            90deg,
-            rgba(30, 190, 182, 1) 0%,
-            rgba(0, 130, 124, 1) 100%
-          );
-          transition: all 0.35s ease-in-out;
-          color: white;
-          &:hover {
-            color: white;
-          }
-          i {
-            text-align: center;
-            height: 30px;
-            background: #ffffff;
-            color: #1ebeb6;
-            line-height: 30px !important;
-            width: 30px;
-            border-radius: 50%;
-            margin-left: 0;
-            margin-right: 10px;
-          }
+      position: relative;
+      .img-box {
+        animation: bgZoom 20s infinite;
+        max-height: 800px;
+        &::after {
+          background: #000000 none repeat scroll 0 0;
+          content: "";
+          height: 100%;
+          left: 0;
+          opacity: 0.5;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 0;
         }
       }
-    }
-    .item {
-        animation: bgZoom 20s;
-      background-position: center center !important;
-      background-repeat: no-repeat !important;
-      background-size: cover !important;
-      height: 100vh !important;
-      width: 100% !important;
-      &::after {
-        background: #000000 none repeat scroll 0 0;
-        content: "";
-        height: 100%;
-        left: 0;
-        opacity: 0.5;
+      .banner-box {
         position: absolute;
         top: 0;
+        left: 0;
         width: 100%;
-        z-index: -1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .banner-words {
+          position: relative;
+          &::before {
+            content: "\f21e";
+            position: absolute;
+            left: 186px;
+            top: 3px;
+            font-family: "Font Awesome 5 Free";
+            height: 100%;
+            width: 350px;
+            color: white;
+            z-index: 0;
+            opacity: 0.2;
+            font-weight: 600;
+            font-size: 150px;
+          }
+          h4 {
+            color: white;
+            text-transform: capitalize;
+            font-weight: 600;
+            margin-bottom: 25px;
+          }
+          h2 {
+            color: white;
+            font-weight: 300;
+            font-size: 80px;
+            line-height: 1;
+            margin-bottom: 25px;
+            strong {
+              font-weight: 900;
+            }
+          }
+          .discover-button {
+            @extend %main-buttons;
+          }
+        }
       }
     }
   }

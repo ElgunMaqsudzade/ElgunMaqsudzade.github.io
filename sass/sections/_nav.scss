@@ -1,6 +1,6 @@
 nav {
   .active {
-    color: #1ebeb6 !important;
+    color: $mainCol !important;
   }
   .navbar-brand {
     padding: 20px 15px;
@@ -38,7 +38,7 @@ nav {
           transition: all 0.3s;
           transition-delay: 0.1s;
           &:hover {
-            color: #1ebeb6 !important;
+            color: $mainCol !important;
           }
         }
       }
@@ -53,7 +53,7 @@ nav {
         transition: all 0.3s;
         transition-delay: 0.1s;
         &:hover {
-          color: #1ebeb6 !important;
+          color: $mainCol !important;
         }
       }
     }
@@ -73,7 +73,7 @@ nav {
           font-size: 46px;
           position: relative;
           float: left;
-          color: #1ebeb6;
+          color: $mainCol;
           top: 3px;
         }
         p {

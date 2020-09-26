@@ -17,6 +17,9 @@ $(function () {
   }
   drophover();
   function banner() {
+    $("#myCarousel").carousel({
+      interval: 100000000000000,
+    });
   }
   banner();
 });
