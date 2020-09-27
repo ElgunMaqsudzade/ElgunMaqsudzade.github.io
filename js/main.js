@@ -22,7 +22,7 @@ $(function () {
     });
   }
   banner();
-  $(".owl-carousel").owlCarousel({
+  $(".owl-js1").owlCarousel({
     loop: false,
     margin: 50,
     responsive: {
@@ -37,9 +37,31 @@ $(function () {
       },
     },
   });
+  $(".owl-js2").owlCarousel({
+    loop: true,
+    margin: 30,
+    dots: true,
+    dotsEach: 2,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 2.58,
+      },
+    },
+  });
   function appointDrDown() {
-    $(".items").click(function () {
-      $(".items").removeClass("selected-option");
+    $(".items1").click(function () {
+      $(".items1").removeClass("selected-option");
+      $(this).addClass("selected-option");
+      $(this).parent().prev().text($(this).text());
+    });
+    $(".items2").click(function () {
+      $(".items2").removeClass("selected-option");
       $(this).addClass("selected-option");
       $(this).parent().prev().text($(this).text());
     });

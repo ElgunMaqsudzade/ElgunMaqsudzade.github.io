@@ -8,11 +8,11 @@
   padding-bottom: 120px;
   .services-content {
     margin-bottom: 60px;
-    .first {
+    .first-divider {
       @extend %divider;
       width: 40px;
     }
-    .second {
+    .second-divider {
       @extend %divider;
       width: 3px;
     }
