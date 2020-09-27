@@ -4,12 +4,12 @@ $(function () {
       $(".dropdown").hover(
         function () {
           $(this).find(".menu").fadeIn(300);
-          $(this).find(".dropdown-menu").fadeIn(100);
+          $(this).find(".dropdown-box").fadeIn(100);
           $(this).find(".d-toggle").attr("aria-expanded", "true");
         },
         function () {
           $(this).find(".menu").fadeOut(200);
-          $(this).find(".dropdown-menu").fadeOut(150);
+          $(this).find(".dropdown-box").fadeOut(150);
           $(this).find(".d-toggle").attr("aria-expanded", "false");
         }
       );
@@ -37,4 +37,12 @@ $(function () {
       },
     },
   });
+  function appointDrDown() {
+    $(".items").click(function () {
+      $(".items").removeClass("selected-option");
+      $(this).addClass("selected-option");
+      $(this).parent().prev().text($(this).text());
+    });
+  }
+  appointDrDown();
 });

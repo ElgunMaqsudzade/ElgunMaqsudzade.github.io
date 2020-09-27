@@ -130,9 +130,13 @@ nav #navbarSupportedContent ul .d-toggle:hover::after {
 }
 
 nav #navbarSupportedContent ul .dropdown-menu {
+  transform: translateY(-1px);
+  border: 1px solid white;
+  border-radius: 2px !important;
   width: 250px;
   transition: 1s;
   margin: 0 !important;
+  box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.2);
 }
 
 nav #navbarSupportedContent ul .dropdown-menu .dropdown-item {
@@ -156,7 +160,7 @@ nav #navbarSupportedContent ul .nav-link {
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.06em;
-  padding: 35px 15px;
+  padding: 30px 15px;
   transition: all 0.3s;
   transition-delay: 0.1s;
 }
@@ -171,7 +175,7 @@ nav .attr-nav ul {
 }
 
 nav .attr-nav ul .contact {
-  padding: 18px 0;
+  padding: 15px 0;
   margin-left: 30px;
   display: flex;
   align-items: center;
@@ -667,6 +671,7 @@ header .carousel-inner .carousel-item .banner-box .banner-words h2 strong {
 }
 
 .consultations .appointment-form {
+  text-align: center;
   background: #1ebeb6;
   padding: 60px 37px;
   position: relative;
@@ -693,24 +698,84 @@ header .carousel-inner .carousel-item .banner-box .banner-words h2 strong {
   z-index: 1;
 }
 
+.consultations .appointment-form .img-holder {
+  margin: 15px 0 25px 0;
+}
+
 .consultations .appointment-form input,
-.consultations .appointment-form #dropdownMenuButton {
+.consultations .appointment-form .dropdown-toggle {
+  position: relative;
+  text-align: left;
   margin-bottom: 1rem;
   background: rgba(255, 255, 255, 0.1);
   width: 100%;
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   padding: 0 25px;
-  color: #ffffff;
+  color: white;
   min-height: 50px;
   line-height: 1.5;
   font-size: 1rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.consultations .appointment-form input:focus,
+.consultations .appointment-form .dropdown-toggle:focus {
+  outline: none;
+}
+
+.consultations .appointment-form input::after,
+.consultations .appointment-form .dropdown-toggle::after {
+  content: "\f107";
+  position: absolute;
+  top: 17px;
+  right: 14px;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  transition-delay: 0.01s;
+  transition: all 0.33s;
+  line-height: 1;
+  border: 0;
+  vertical-align: baseline;
 }
 
 .consultations .appointment-form input::placeholder,
-.consultations .appointment-form #dropdownMenuButton::placeholder {
+.consultations .appointment-form .dropdown-toggle::placeholder {
   color: #ffffff;
+}
+
+.consultations .appointment-form .dropdown-menu {
+  top: -12px !important;
+  left: 0 !important;
+}
+
+.consultations .appointment-form .dropdown-menu .dropdown-item {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 30px;
+  min-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 29px;
+  display: block;
+  margin: 0;
+}
+
+.consultations .appointment-form .dropdown-menu .selected-option {
+  font-weight: bold;
+}
+
+.consultations .appointment-form .dropdown.show .dropdown-toggle::after {
+  content: "\f107";
+  transform: rotate(-180deg);
+}
+
+.consultations .appointment-form .dropdown.show .dropdown-menu {
+  padding: 0 !important;
+  animation: dropAnime 0.3s forwards !important;
 }
 
 .consultations .appointment-form #submit {
@@ -724,5 +789,24 @@ header .carousel-inner .carousel-item .banner-box .banner-words h2 strong {
   line-height: 1.5;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.consultations .appointment-form #submit:active {
+  outline: none;
+}
+
+.consultations .appointment-form #submit:focus {
+  outline: none;
+}
+
+@keyframes dropAnime {
+  0% {
+    transform: scale(0.7, 0.7) translate3d(-20px, 20px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1) translate3d(6px, 63px, 0);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -25,9 +25,14 @@ nav {
         }
       }
       .dropdown-menu {
+        transform: translateY(-1px);
+        border: 1px solid white;
+        border-radius: 2px !important;
         width: 250px;
         transition: 1s;
         margin: 0 !important;
+        box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.2);
+
         .dropdown-item {
           color: #333333;
           font-family: "Inter", sans-serif;
@@ -49,7 +54,7 @@ nav {
         font-weight: 600;
         font-size: 13px;
         letter-spacing: 0.06em;
-        padding: 35px 15px;
+        padding: 30px 15px;
         transition: all 0.3s;
         transition-delay: 0.1s;
         &:hover {
@@ -64,7 +69,7 @@ nav {
       padding: 0;
 
       .contact {
-        padding: 18px 0;
+        padding: 15px 0;
         margin-left: 30px;
         display: flex;
         align-items: center;
