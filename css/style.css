@@ -1223,8 +1223,43 @@ header .carousel-inner .carousel-item .banner-box .banner-words h2 strong {
   color: #1ebeb6;
 }
 
+.contact {
+  padding: 120px 0;
+}
+
 .contact .bg-img {
   background-image: url(../../images/contact/1.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.contact .bg-img .contact-info {
+  background-color: white;
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  padding: 30px;
+  right: 30px;
+}
+
+.contact .bg-img .contact-info ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.contact .bg-img .contact-info ul li {
+  margin: 0 30px;
+}
+
+.contact .bg-img .contact-info ul li h5 {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #233645;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .contact .form-title h2 {
@@ -1240,9 +1275,33 @@ header .carousel-inner .carousel-item .banner-box .banner-words h2 strong {
 }
 
 .contact form input {
+  min-height: 50px;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid #787878;
+  border-bottom: 1px solid #e7e7e7;
   padding: 0;
+}
+
+.contact form textarea {
+  min-height: 150px;
+  height: auto;
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0;
+  border-radius: 0;
+  overflow: auto;
+  resize: vertical;
+}
+
+.contact form #submit {
+  background: linear-gradient(90deg, #1ebeb6 0%, #00827c 100%);
+  padding: 12px 35px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  margin-top: 15px;
+  border: none !important;
+  box-shadow: inherit !important;
+  outline: none !important;
 }
 /*# sourceMappingURL=style.css.map */
