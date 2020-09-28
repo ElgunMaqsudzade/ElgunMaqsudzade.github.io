@@ -1,5 +1,41 @@
 .contact {
-    .bg-img {
-        background-image: url(../../images/contact/1.jpg);
+  .bg-img {
+    background-image: url(../../images/contact/1.jpg);
+    .contact-info {
+      ul {
+        li {
+          h5 {
+            i {
+            }
+          }
+          span {
+          }
+        }
+      }
     }
+  }
+  .form-title {
+    h2 {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: $darkCol;
+    }
+    h3 {
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: $mainCol;
+    }
+  }
+  form {
+    input {
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid rgb(120, 120, 120);
+      padding: 0;
+    }
+    textarea {
+    }
+    #submit {
+    }
+  }
 }
