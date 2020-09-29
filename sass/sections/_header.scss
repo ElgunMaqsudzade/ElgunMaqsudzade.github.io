@@ -4,7 +4,6 @@ header {
       position: relative;
       .img-box {
         animation: bgZoom 20s infinite;
-        max-height: 800px;
         &::after {
           background: #000000 none repeat scroll 0 0;
           content: "";
@@ -27,39 +26,41 @@ header {
         align-items: center;
 
         .banner-words {
-          position: relative;
-          &::before {
-            content: "\f21e";
-            position: absolute;
-            left: 186px;
-            top: 3px;
-            font-family: "Font Awesome 5 Free";
-            height: 100%;
-            width: 350px;
-            color: white;
-            z-index: 0;
-            opacity: 0.2;
-            font-weight: 600;
-            font-size: 150px;
-          }
-          h4 {
-            color: white;
-            text-transform: capitalize;
-            font-weight: 600;
-            margin-bottom: 25px;
-          }
-          h2 {
-            color: white;
-            font-weight: 300;
-            font-size: 80px;
-            line-height: 1;
-            margin-bottom: 25px;
-            strong {
-              font-weight: 900;
+          .words {
+            position: relative;
+            &::before {
+              content: "\f21e";
+              position: absolute;
+              left: -33px;
+              top: 3px;
+              font-family: "Font Awesome 5 Free";
+              height: 100%;
+              width: 350px;
+              color: white;
+              z-index: 0;
+              opacity: 0.2;
+              font-weight: 600;
+              font-size: 150px;
             }
-          }
-          .discover-button {
-            @extend %main-buttons;
+            h4 {
+              color: white;
+              text-transform: capitalize;
+              font-weight: 600;
+              margin-bottom: 25px;
+            }
+            h2 {
+              color: white;
+              font-weight: 300;
+              font-size: 80px;
+              line-height: 1;
+              margin-bottom: 25px;
+              strong {
+                font-weight: 900;
+              }
+            }
+            .discover-button {
+              @extend %main-buttons;
+            }
           }
         }
       }
