@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="shortcut icon" href="images/title.png" type="image/x-icon" />
-    <!-- <script
+    <script
       src="https://kit.fontawesome.com/f43c2d496a.js"
       crossorigin="anonymous"
-    ></script> -->
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -1190,26 +1190,26 @@
             <div class="contact-info">
               <ul>
                 <li>
-                  <h5><i class="flaticon-call"></i> Phone</h5>
+                  <h5><i class="fas fa-phone"></i> Phone</h5>
                   <span>+44-20-7328-4499</span>
                 </li>
                 <li>
-                  <h5><i class="flaticon-email"></i> Email</h5>
+                  <h5><i class="far fa-envelope"></i> Email</h5>
                   <span>info@healdi.com</span>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col-5">
+          <div style="padding-left: 50px;" class="col-5">
             <div class="form-title">
               <h2>Need Help?</h2>
               <h3>Let's ask your questions</h3>
             </div>
-            <form action="">
+            <form id="contact-form" action="">
               <div class="row">
                 <div class="col-12">
                   <input
-                  class="form-control"
+                    class="form-control"
                     type="text"
                     name="name-2"
                     id="name-2"
@@ -1218,7 +1218,7 @@
                 </div>
                 <div class="col-6">
                   <input
-                  class="form-control"
+                    class="form-control"
                     type="email"
                     name="email-2"
                     id="email-2"
@@ -1228,7 +1228,7 @@
                 </div>
                 <div class="col-6">
                   <input
-                  class="form-control"
+                    class="form-control"
                     type="text"
                     name="phone-2"
                     id="phone-2"
@@ -1237,15 +1237,35 @@
                 </div>
                 <div class="col-12">
                   <textarea
-                  class="form-control"
+                    class="form-control"
                     name="comments"
                     id="comments"
+                    placeholder="Tell Us About Project *"
                   ></textarea>
                 </div>
-                <div class="col-lg-12">
-                  <button type="submit" name="submit" id="submit">
-                    Send Message
-                  </button>
+                <div style="min-height: 130px" class="col-lg-12">
+                  <div class="button-holder">
+                    <button type="submit" name="submit" id="submit">
+                      Send Message
+                    </button>
+                    <div class="icon-holder ">
+                      <i class="fas fa-circle-notch"></i>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="alert-box">
+                      <div class="empty">
+                        <p>You must enter your name</p>
+                      </div>
+                      <div class="fill">
+                        <p>Please fill all fields</p>
+                      </div>
+                      <div class="error"><p>ERROR</p></div>
+                      <div class="comments">
+                        <p>You must enter your comments</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </form>
@@ -1254,6 +1274,142 @@
       </div>
     </section>
     <!-- contact section ends -->
+    <!-- footer starts -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <div class="img-holder">
+              <img src="images/logo-light.png" alt="" />
+            </div>
+            <p>
+              Required honoured trifling eat pleasure man relation. Assurance
+              yet bed was improving furniture man. Distrusts delighted
+            </p>
+            <div class="info-box">
+              <ul>
+                <li>
+                  <i class="far fa-envelope"></i>
+                  <div class="info">
+                    <h5>Email:</h5>
+                    <span>support@validtemplates.com</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-phone"></i>
+                  <div class="info">
+                    <h5>Phone:</h5>
+                    <span>+44-20-7328-4499</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="f-links">
+              <h4 class="title">Department</h4>
+              <ul>
+                <li>
+                  <a href="#">Medecine &amp; Health</a>
+                </li>
+                <li>
+                  <a href="#">Dental Care</a>
+                </li>
+                <li>
+                  <a href="#">Eye Treatment</a>
+                </li>
+                <li>
+                  <a href="#">Children Chare</a>
+                </li>
+                <li>
+                  <a href="#">Traumatology</a>
+                </li>
+                <li>
+                  <a href="#">X-ray</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="f-links">
+              <h4 class="title">Usefull Links</h4>
+              <ul>
+                <li>
+                  <a href="#">Ambulance</a>
+                </li>
+                <li>
+                  <a href="#">Emergency</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Project</a>
+                </li>
+                <li>
+                  <a href="#">About Us</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="f-branches">
+              <div class="branches">
+                <ul>
+                  <li>
+                    <strong>USA Branches:</strong>
+                    <span
+                      >4992 Bryan Avenue, Prior Lake, Minnesota <br />
+                      Phone: 651-379-4698</span
+                    >
+                  </li>
+                  <li>
+                    <strong>Central Branches:</strong>
+                    <span
+                      >2001 Kia Magentis, Prior Lake, Minnesota <br />
+                      Phone: 651-379-4698</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer ends -->
+    <!-- footer-bottom starts -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-center">
+          <div class="col-lg-6">
+            <p>
+              Copyright © 2020. Designed by
+              <a href="https://github.com/ElgunMaqsudzade/Project"
+                >Elgun Maqsudzade</a
+              >
+            </p>
+          </div>
+          <div class="col-lg-6 text-right social">
+            <ul>
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-youtube"></i> Youtube</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer-bottom ends -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="

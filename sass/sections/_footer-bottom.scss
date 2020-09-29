@@ -1,0 +1,29 @@
+.footer-bottom {
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  background: #001d4c !important;
+  p {
+    margin: 0;
+    color: white;
+    a {
+      color: white;
+      font-weight: 600;
+    }
+  }
+  .social {
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+      li {
+        margin-left: 20px;
+        a {
+          color: white;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
