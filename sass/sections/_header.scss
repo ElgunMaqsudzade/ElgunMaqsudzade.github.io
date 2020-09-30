@@ -1,4 +1,5 @@
 header {
+  overflow: hidden;
   .carousel-inner {
     .carousel-item {
       position: relative;
@@ -25,53 +26,124 @@ header {
         display: flex;
         align-items: center;
 
-        .banner-words {
-          .words {
-            position: relative;
-            &::before {
-              content: "\f21e";
-              position: absolute;
-              left: -33px;
-              top: 3px;
-              font-family: "Font Awesome 5 Free";
-              height: 100%;
-              width: 350px;
-              color: white;
-              z-index: 0;
-              opacity: 0.2;
-              font-weight: 600;
-              font-size: 150px;
+        .words {
+          @media only screen and (max-width: 767.98px) {
+            text-align: center;
+          }
+          position: relative;
+          &::before {
+            content: "\f21e";
+            position: absolute;
+            left: -33px;
+            top: 3px;
+            font-family: "Font Awesome 5 Free";
+            height: 100%;
+            width: 350px;
+            color: white;
+            z-index: 0;
+            opacity: 0.2;
+            font-weight: 600;
+            font-size: 150px;
+            @media only screen and (max-width: 767.98px) {
+              font-size: 130px;
             }
-            h4 {
-              color: white;
-              text-transform: capitalize;
-              font-weight: 600;
-              margin-bottom: 25px;
-            }
-            h2 {
-              color: white;
-              font-weight: 300;
+            @media only screen and (max-width: 575.98px) {
               font-size: 80px;
-              line-height: 1;
-              margin-bottom: 25px;
-              strong {
-                font-weight: 900;
-              }
+              left: 50%;
+              transform: translate(-50%);
             }
-            .discover-button {
-              @extend %main-buttons;
+          }
+          h4 {
+            animation: fade 1s;
+            color: white;
+            text-transform: capitalize;
+            font-weight: 600;
+            margin-bottom: 25px;
+            @media only screen and (max-width: 991.98px) {
+              font-size: 1.3rem;
             }
+            @media only screen and (max-width: 767.98px) {
+              font-size: 18px;
+            }
+            @media only screen and (max-width: 575.98px) {
+              font-size: 16px;
+              margin-bottom: 5px;
+            }
+          }
+          h2 {
+            @media only screen and (max-width: 991.98px) {
+              font-size: 60px;
+            }
+            @media only screen and (max-width: 767.98px) {
+              font-size: 36px;
+            }
+            @media only screen and (max-width: 575.98px) {
+              font-size: 25px;
+              margin-bottom: 5px;
+            }
+            color: white;
+            font-weight: 300;
+            font-size: 80px;
+            line-height: 1;
+            margin-bottom: 25px;
+            strong {
+              font-weight: 900;
+            }
+          }
+          .discover-button {
+            @extend %main-buttons;
           }
         }
       }
     }
   }
+  // carousel button hover
+  &:hover {
+    .carousel-control-prev {
+      transform: translateX(-30%);
+    }
+    .carousel-control-next {
+      transform: translateX(30%);
+    }
+  }
+  .carousel-control-prev {
+    transition: 0.3s;
+    transform: translateX(-100%);
+    opacity: 1;
+    i {
+      font-size: 40px;
+      color: white;
+    }
+  }
+  .carousel-control-next {
+    transition: 0.3s;
+    transform: translateX(100%);
+    opacity: 1;
+    i {
+      font-size: 40px;
+      color: white;
+    }
+  }
 }
+// background zoom animation
 @keyframes bgZoom {
   0% {
     transform: scale(1, 1);
   }
   100% {
     transform: scale(1.2, 1.2);
+  }
+}
+// background  carousel text fadeDown animation
+@keyframes fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -1200%, 0);
+    transform: translate3d(0, -1200%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }

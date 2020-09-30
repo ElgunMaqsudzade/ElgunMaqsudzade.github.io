@@ -1,6 +1,11 @@
 .doctors {
+  background-color: #f7f7f7;
   padding: 120px 0;
+  @media only screen and (max-width: 767.98px) {
+    padding: 50px 0;
+  }
   .content {
+    
     margin-bottom: 60px;
     .first-divider {
       @extend %divider;
@@ -21,13 +26,27 @@
       font-weight: 600;
       margin: 0;
     }
+    p {
+      margin: 0;
+      margin-top: 20px;
+      padding: 0 7%;
+    }
   }
   .dc-nav {
+    @media only screen and (max-width: 991.98px) {
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+    }
     .active {
       background: $mainCol;
       color: white;
     }
     a {
+      @media only screen and (max-width: 991.98px) and (min-width: 767.98px) {
+        margin: 1%;
+        max-width: 48%;
+      }
       transition: 0.35s;
       display: flex;
       line-height: 45px;
@@ -53,8 +72,13 @@
   .tab-content {
     .img-holder {
       margin-bottom: 30px;
+      @media only screen and (max-width: 991.98px) {
+        margin-bottom: 0px;
+        margin-top: 30px;
+      }
     }
     .tab-card {
+      background-color: white;
       padding: 30px 40px;
       h4 {
         font-size: 22px;

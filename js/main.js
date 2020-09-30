@@ -8,6 +8,28 @@ $(function () {
     }
   }
   responsiveNess();
+  function responseChooseUs() {
+    /* First i wrote choose-us section in the container-fluid because example layout was like that.
+     I could use another way but i just wrote in this way. And than i needed return it into the container
+      form that is why i wrote this function*/
+    if ($(window).width() <= 991.98) {
+      $(".response").removeClass("container-fluid");
+      $(".response").addClass("container");
+    } else {
+      $(".response").removeClass("container");
+      $(".response").addClass("container-fluid");
+    }
+    $(window).resize(function () {
+      if ($(window).width() <= 991.98) {
+        $(".response").removeClass("container-fluid");
+        $(".response").addClass("container");
+      } else {
+        $(".response").removeClass("container");
+        $(".response").addClass("container-fluid");
+      }
+    });
+  }
+  responseChooseUs();
   function navbarButton() {
     $(".navbar-toggler").click(function () {
       if (!$(".navbar-toggler").hasClass("collapsed")) {
@@ -40,15 +62,15 @@ $(function () {
 
   $(".owl-js1").owlCarousel({
     loop: false,
-    margin: 50,
+    margin: 20,
     responsive: {
       0: {
         items: 1,
       },
-      600: {
-        items: 3,
+      768: {
+        items: 2,
       },
-      1000: {
+      992: {
         items: 3,
       },
     },
@@ -56,17 +78,17 @@ $(function () {
   $(".owl-js2").owlCarousel({
     loop: true,
     margin: 30,
-    dots: true,
-    dotsEach: 2,
     responsive: {
       0: {
         items: 1,
       },
-      600: {
-        items: 3,
+      992: {
+        items: 2.9,
+        dotsEach: 2,
       },
-      1000: {
+      1200: {
         items: 2.58,
+        dotsEach: 2,
       },
     },
   });

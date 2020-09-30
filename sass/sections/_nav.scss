@@ -9,8 +9,17 @@ nav {
       }
       .navbar-brand {
         padding: 20px 15px;
+        img {
+          height: 40px;
+        }
+        @media only screen and (max-width: 991.98px) {
+          padding: 15px;
+          height: 70px;
+          margin: 0;
+        }
       }
       .navbar-toggler {
+        margin-left: 30px;
         &:focus {
           outline: none;
         }
@@ -24,6 +33,9 @@ nav {
         }
         @media only screen and (min-width: 1200px) {
           order: 1;
+        }
+        @media only screen and (max-width: 767.98px) {
+          margin-left: 30px;
         }
         ul {
           .dropdown {
@@ -127,11 +139,20 @@ nav {
         @media only screen and (min-width: 1200px) {
           order: 2;
         }
+        @media only screen and (max-width: 767.98px) {
+          display: none;
+        }
+
         ul {
           margin: 0;
           padding: 0;
 
           .contact {
+            @media only screen and (max-width: 991.98px) {
+              padding: 15px;
+              height: 70px;
+              margin: 0;
+            }
             padding: 15px 0;
             margin-left: 30px;
             display: flex;

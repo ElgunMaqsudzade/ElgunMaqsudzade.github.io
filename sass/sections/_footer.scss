@@ -1,6 +1,16 @@
 footer {
   background: #001d4c !important;
   padding: 120px 0;
+  @media only screen and (max-width: 991.98px) {
+    padding-top: 50px;
+  }
+  @media only screen and (max-width: 767.98px) {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+  .mr-top {
+    margin-top: 50px;
+  }
   .img-holder {
     margin-bottom: 30px;
   }
