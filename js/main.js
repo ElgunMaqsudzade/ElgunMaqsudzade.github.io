@@ -1,13 +1,28 @@
 $(function () {
-  function responsiveNess() {
+  function navBarResp() {
     // If the responsiveness is less then 991.98px it will open nav-items as dropdown. But you should reload page as soos as you change responsiveness
-    if ($(window).width() <= 991.98) {
-      $(".dropdown").removeClass("d-hover");
-    } else {
-      $(".dropdown").addClass("d-hover");
+    function drophover() {
+      $(".dropdown").hover(
+        function () {
+          $(this).find(".menu").fadeIn(300);
+          $(this).find(".dropdown-box").fadeIn(100);
+        },
+        function () {
+          $(this).find(".menu").fadeOut(200);
+          $(this).find(".dropdown-box").fadeOut(150);
+        }
+      );
     }
+    if (!($(window).width() <= 991.98)) {
+      drophover();
+    }
+    $(window).resize(function () {
+      if (!($(window).width() <= 991.98)) {
+        drophover();
+      }
+    });
   }
-  responsiveNess();
+  navBarResp();
   function responseChooseUs() {
     /* First i wrote choose-us section in the container-fluid because example layout was like that.
      I could use another way but i just wrote in this way. And than i needed return it into the container
@@ -42,23 +57,6 @@ $(function () {
     });
   }
   navbarButton();
-  function drophover() {
-    if ($(".dropdown").hasClass("d-hover")) {
-      $(".dropdown").hover(
-        function () {
-          $(this).find(".menu").fadeIn(300);
-          $(this).find(".dropdown-box").fadeIn(100);
-          $(this).find(".d-toggle").attr("aria-expanded", "true");
-        },
-        function () {
-          $(this).find(".menu").fadeOut(200);
-          $(this).find(".dropdown-box").fadeOut(150);
-          $(this).find(".d-toggle").attr("aria-expanded", "false");
-        }
-      );
-    }
-  }
-  drophover();
 
   $(".owl-js1").owlCarousel({
     loop: false,
