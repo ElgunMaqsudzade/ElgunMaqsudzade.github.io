@@ -62,7 +62,7 @@ $(function () {
 
   $(".owl-js1").owlCarousel({
     loop: false,
-    margin: 20,
+    margin: 30,
     responsive: {
       0: {
         items: 1,

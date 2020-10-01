@@ -1,0 +1,180 @@
+.services-2 {
+  padding: 120px 0;
+  @media only screen and (max-width: 767.98px) {
+    padding: 50px 0;
+  }
+  .services-content {
+    margin-bottom: 60px;
+    .first-divider {
+      @extend %divider;
+      width: 40px;
+    }
+    .second-divider {
+      @extend %divider;
+      width: 3px;
+    }
+    h4 {
+      color: $mainCol;
+      font-weight: 600;
+      @media only screen and (max-width: 767.98px) {
+        font-size: 18px;
+        line-height: 1.4;
+      }
+    }
+    h2 {
+      color: $darkCol;
+      font-weight: 600;
+      @media only screen and (max-width: 767.98px) {
+        font-size: 26px;
+      }
+    }
+    p {
+      max-width: 700px;
+    }
+  }
+  .carousel {
+    user-select: none;
+    .owl-stage-outer {
+      padding: 15px;
+      .item {
+        text-align: center;
+        padding: 50px 30px 50px;
+        background: white;
+        box-shadow: 0 0 10px #e7e7e7;
+        position: relative;
+        z-index: 1;
+        &:hover {
+          .icon::before {
+            opacity: 1;
+            animation: itemHover 10s infinite linear;
+          }
+        }
+        h4 {
+          font-weight: 600;
+          margin-bottom: 35px;
+          font-size: 22px;
+          a {
+            font-weight: 700;
+            font-size: 22px;
+            margin-top: 15px;
+          }
+        }
+        .icon {
+          display: inline-block;
+          margin-bottom: 35px;
+          position: relative;
+          z-index: 1;
+          height: 90px;
+          width: 90px;
+          line-height: 90px;
+          border-radius: 100%;
+          background: $mainCol;
+          &::before {
+            content: "";
+            transition: 0.35s;
+            background-image: url(../../images/services-2/7.png);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 110px;
+            width: 110px;
+            opacity: 0.3;
+            background-position: center center;
+            background-size: cover;
+            position: absolute;
+          }
+          i {
+            position: absolute;
+            font-size: 20px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(var(--ggs, 2));
+            color: white;
+          }
+          .fa-bone {
+            font-size: 40px;
+            transform: translate(-50%, -50%) rotate(-45deg);
+          }
+        }
+        padding: 30px;
+
+        .button {
+          margin-top: 15px;
+          display: inline-block;
+          color: $mainCol;
+          border: 2px solid $mainCol !important;
+          background: white;
+          border-radius: 40px;
+          font-size: 14px;
+          padding: 10px 25px;
+          font-weight: 700;
+          line-height: 25px;
+          transition: 0.35s ease;
+          &:hover {
+            background-color: $mainCol;
+            color: white;
+            i {
+              color: $mainCol;
+              background-color: white;
+            }
+          }
+          i {
+            transition: 0.35s ease-in-out;
+            background-color: $mainCol;
+            line-height: 30px;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            margin-left: 0;
+            margin-right: 5px;
+            z-index: 2;
+            font-size: 14px;
+            color: white;
+          }
+        }
+      }
+    }
+    .owl-dots {
+      margin: 0 !important;
+      .active {
+        position: relative;
+        z-index: 0;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: $mainCol;
+          z-index: 1;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+        }
+      }
+      .owl-dot {
+        &:focus {
+          outline: none;
+        }
+        user-select: none;
+        span {
+          display: block;
+          width: 20px;
+          height: 20px;
+          margin: 5px;
+          background: white !important;
+          border: 2px solid #cccccc;
+        }
+      }
+    }
+  }
+}
+// item hover animation
+@keyframes itemHover {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

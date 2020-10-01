@@ -1,4 +1,5 @@
 nav {
+  box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
   .container {
     .row {
       .active {
@@ -10,7 +11,9 @@ nav {
       .navbar-brand {
         padding: 20px 15px;
         img {
-          height: 40px;
+          @media only screen and (max-width: 991.98px) {
+            height: 40px;
+          }
         }
         @media only screen and (max-width: 991.98px) {
           padding: 15px;
