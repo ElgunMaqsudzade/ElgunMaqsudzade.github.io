@@ -134,4 +134,40 @@
       }
     }
   }
+  // blog-3 page buttons
+  .page-buttons {
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      margin-top: 45px;
+      justify-content: center;
+      @media only screen and (max-width: 768.98px) {
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+      li {
+        a {
+          border-radius: 10px !important;
+          font-weight: 700;
+          padding: 15px 20px;
+          margin: 5px;
+          margin-bottom: 0;
+          border-radius: 10px;
+          color: $mainCol;
+        }
+      }
+      .active {
+        a {
+          border-color: #dee2e6;
+          padding: 15px 20px;
+          margin: 5px;
+          margin-bottom: 0;
+          border-radius: 10px;
+          background-color: $mainCol !important;
+          color: white;
+        }
+      }
+    }
+  }
 }

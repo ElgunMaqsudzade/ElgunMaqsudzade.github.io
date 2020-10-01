@@ -9,14 +9,15 @@
     rgba(0, 130, 124, 1) 100%
   );
   position: relative;
-  &::after {
+  &::before {
+    pointer-events: none;
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
-    background-image: url(/images/breadcrumb/9.png);
+    background-image: url(../images/breadcrumb/9.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -24,6 +25,9 @@
     opacity: 0.5;
   }
   h1 {
+    @media only screen and (max-width: 767px) {
+      font-size: 36px;
+    }
     font-weight: 700;
     color: white;
     margin-bottom: 15px;

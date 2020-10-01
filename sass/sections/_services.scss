@@ -3,7 +3,7 @@
       rgba(247, 247, 247, 0.92),
       rgba(247, 247, 247, 0.95)
     ),
-    url(../../images/Services/services-bg/8.png);
+    url(../images/Services/8.png);
   padding-bottom: 120px;
   @media only screen and (max-width: 767.98px) {
     padding-bottom: 50px 0;
@@ -52,7 +52,7 @@
           bottom: -80px;
           height: 150px;
           width: 150px;
-          background: url(/images/Services/services-bg/4.png);
+          background: url(../images/Services/bg.png);
           background-size: contain;
           background-repeat: no-repeat;
           transform: rotate(-45deg);
