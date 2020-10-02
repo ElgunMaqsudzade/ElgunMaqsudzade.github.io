@@ -36,21 +36,24 @@ $(function () {
     });
   }
   navbarButton();
-  $(".owl-js1").owlCarousel({
-    loop: false,
-    margin: 30,
-    responsive: {
-      0: {
-        items: 1,
+  function carousel1() {
+    $(".owl-js1").owlCarousel({
+      loop: false,
+      margin: 30,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        768: {
+          items: 2,
+        },
+        992: {
+          items: 3,
+        },
       },
-      768: {
-        items: 2,
-      },
-      992: {
-        items: 3,
-      },
-    },
-  });
+    });
+  }
+  carousel1();
   function appointDrDown() {
     $(".items1").click(function () {
       $(".items1").removeClass("selected-option");
@@ -107,7 +110,7 @@ $(function () {
 
     updateCount();
   }
-//   counterUp function calling
+  //   counterUp function calling
   $(window).scroll(function () {
     if (document.documentElement.scrollTop < 1000) {
       counterUp();

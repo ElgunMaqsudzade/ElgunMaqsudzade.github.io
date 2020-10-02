@@ -58,37 +58,42 @@ $(function () {
   }
   navbarButton();
 
-  $(".owl-js1").owlCarousel({
-    loop: false,
-    margin: 50,
-    responsive: {
-      0: {
-        items: 1,
+  function carousel1() {
+    $(".owl-js1").owlCarousel({
+      loop: false,
+      margin: 30,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        768: {
+          items: 2,
+        },
+        992: {
+          items: 3,
+        },
       },
-      768: {
-        items: 2,
-        dotsEach: 1,
+    });
+  }
+  carousel1();
+  function carousel2() {
+    $(".owl-js2").owlCarousel({
+      loop: true,
+      margin: 30,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        992: {
+          items: 2.9,
+          dotsEach: 2,
+        },
+        1200: {
+          items: 2.58,
+          dotsEach: 2,
+        },
       },
-      992: {
-        items: 3,
-      },
-    },
-  });
-});
-$(".owl-js2").owlCarousel({
-  loop: true,
-  margin: 30,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    992: {
-      items: 2.9,
-      dotsEach: 2,
-    },
-    1200: {
-      items: 2.58,
-      dotsEach: 2,
-    },
-  },
+    });
+  }
+  carousel2();
 });

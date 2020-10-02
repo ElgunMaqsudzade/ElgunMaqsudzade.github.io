@@ -75,7 +75,7 @@ $(function () {
       },
     });
   }
-  carousel();
+  carousel1();
   function carousel2() {
     $(".owl-js2").owlCarousel({
       loop: true,
