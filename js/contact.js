@@ -23,28 +23,6 @@ $(function () {
     });
   }
   navBarResp();
-  function responseChooseUs() {
-    /* First i wrote choose-us section in the container-fluid because example layout was like that.
-     I could use another way but i just wrote in this way. And than i needed return it into the container
-      form that is why i wrote this function*/
-    if ($(window).width() <= 991.98) {
-      $(".response").removeClass("container-fluid");
-      $(".response").addClass("container");
-    } else {
-      $(".response").removeClass("container");
-      $(".response").addClass("container-fluid");
-    }
-    $(window).resize(function () {
-      if ($(window).width() <= 991.98) {
-        $(".response").removeClass("container-fluid");
-        $(".response").addClass("container");
-      } else {
-        $(".response").removeClass("container");
-        $(".response").addClass("container-fluid");
-      }
-    });
-  }
-  responseChooseUs();
   function navbarButton() {
     $(".navbar-toggler").click(function () {
       if (!$(".navbar-toggler").hasClass("collapsed")) {
@@ -57,59 +35,6 @@ $(function () {
     });
   }
   navbarButton();
-
-  function carousel1() {
-    $(".owl-js1").owlCarousel({
-      loop: false,
-      margin: 30,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 3,
-        },
-      },
-    });
-  }
-  carousel();
-  function carousel2() {
-    $(".owl-js2").owlCarousel({
-      loop: true,
-      margin: 30,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        992: {
-          items: 2.9,
-          dotsEach: 2,
-        },
-        1200: {
-          items: 2.58,
-          dotsEach: 2,
-        },
-      },
-    });
-  }
-  carousel2();
-
-  function appointDrDown() {
-    $(".items1").click(function () {
-      $(".items1").removeClass("selected-option");
-      $(this).addClass("selected-option");
-      $(this).parent().prev().text($(this).text());
-    });
-    $(".items2").click(function () {
-      $(".items2").removeClass("selected-option");
-      $(this).addClass("selected-option");
-      $(this).parent().prev().text($(this).text());
-    });
-  }
-  appointDrDown();
   function contactForm() {
     $("#contact-form").submit(function (e) {
       e.preventDefault();

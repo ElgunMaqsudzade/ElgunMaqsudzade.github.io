@@ -59,6 +59,7 @@ nav {
               }
 
               .dropdown-item {
+                pointer-events: all;
                 color: #333333;
                 font-family: "Inter", sans-serif;
                 padding: 5px 15px;
@@ -67,11 +68,23 @@ nav {
                 letter-spacing: 0.06em;
                 transition: all 0.3s;
                 transition-delay: 0.1s;
+                &:active {
+                  background-color: white;
+                }
                 @media only screen and (max-width: 991.98px) {
                   padding: 0;
                 }
                 &:hover {
-                  color: $mainCol !important;
+                  color: $mainCol;
+                }
+              }
+              .dropdown-divider {
+                opacity: 0.6;
+              }
+              .disabled {
+                opacity: 0.6;
+                &:hover {
+                  color: #333333;
                 }
               }
             }
