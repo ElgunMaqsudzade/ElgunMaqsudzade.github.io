@@ -1,4 +1,10 @@
 $(function () {
+  function pageLoad() {
+    $(window).on("load", function () {
+      $(".pageload").fadeOut();
+    });
+  }
+  pageLoad();
   function navBarResp() {
     // If the responsiveness is less then 991.98px it will open nav-items as dropdown. But you should reload page as soos as you change responsiveness
     function drophover() {
@@ -67,26 +73,35 @@ $(function () {
     });
   }
   appointDrDown();
+  function fadeIn() {
+    let callOnce1 = true;
+    $(window).scroll(function () {
+      if (document.documentElement.scrollTop > 1300 && callOnce1) {
+        $(".appointment-form").addClass("animationRight");
+        callOnce1 = false;
+      }
+    });
+  }
+  fadeIn();
   //   counter up function
   function counterUp() {
     //   for terminating function over first calling
     counterUp = function () {};
-    //   counts wich will increase through reloading function
     let count1 = 0;
     let count2 = 0;
     let count3 = 0;
     let count4 = 0;
-    /*  I divided numbers which we will reach to the seconds. 
-    And we will get the number which shows how many we should increase for 1 second.
-    And i put it into the array */
+
     let arr = [];
     document.querySelectorAll(".timer").forEach((element) => {
       let target = element.getAttribute("data-to");
       let speed = element.getAttribute("data-speed");
+      /* And we will get the number which shows how many we should increase for 1 second.
+    And i put it into the array */
       arr.push(target / speed);
     });
     /*  Then i reloaded each function for every 100ms.And each reload time 
-    our number increasis.I am not reloading functions each 1s.It is reloading each 100ms, 
+    our number increases.I am not reloading functions each 1s.It is reloading each 100ms, 
     that is why i divided each array item by 10. */
     let updateCount = () => {
       if (Math.ceil(count1) < $(".timer1").data("to")) {

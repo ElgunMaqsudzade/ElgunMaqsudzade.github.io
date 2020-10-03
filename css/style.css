@@ -1,3 +1,13 @@
+.pageload {
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: url(/images/preloader.gif) center no-repeat white;
+}
+
 * {
   list-style-type: none !important;
 }
@@ -70,6 +80,170 @@ header .carousel-inner .carousel-item .banner-box .words .discover-button i, .ab
   width: 30px;
   border: 1px solid #1ebeb6;
   display: inline-block;
+}
+
+/* animation partial was created just because now i can change whatever animation i want easily */
+.animationRight {
+  animation: fadeRight 0.7s ease-in-out;
+}
+
+.animationUp {
+  animation: fadeUp 0.7s ease-in-out;
+}
+
+.animationSingleBlogUp {
+  animation: fadeUpSingleBlog 0.7s ease-in-out;
+}
+
+.animationBlogUp1 {
+  animation: fadeUpBlog1 0.7s ease-in-out;
+}
+
+.animationBlogUp2 {
+  animation: fadeUpBlog2 0.7s ease-in-out;
+}
+
+.animationBlogUp3 {
+  animation: fadeUpBlog3 0.7s ease-in-out;
+}
+
+.animationDown {
+  animation: fadeDown 0.7s ease-in-out;
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(10%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeUpSingleBlog {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 2%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeUpBlog1 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 6%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeUpBlog2 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeUpBlog3 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 14%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes bgZoom {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.2, 1.2);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -1200%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes dropAnime {
+  0% {
+    transform: scale(0.7, 0.7) translate3d(-20px, 20px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1) translate3d(6px, 63px, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes buttonAnime {
+  from {
+    transform: rotate(0);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dropdownOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes itemHover {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 .top-sticky-sec {
@@ -384,15 +558,6 @@ nav .container .row .attr-nav ul .contact p strong {
   font-size: 18px;
 }
 
-@keyframes dropdownOpacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 header {
   overflow: hidden;
 }
@@ -525,11 +690,11 @@ header .carousel-inner .carousel-item .banner-box .words h2 strong {
 }
 
 header:hover .carousel-control-prev {
-  transform: translateX(-30%);
+  transform: translateX(-25%);
 }
 
 header:hover .carousel-control-next {
-  transform: translateX(30%);
+  transform: translateX(25%);
 }
 
 header .carousel-control-prev {
@@ -552,26 +717,6 @@ header .carousel-control-next {
 header .carousel-control-next i {
   font-size: 40px;
   color: white;
-}
-
-@keyframes bgZoom {
-  0% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(1.2, 1.2);
-  }
-}
-
-@keyframes fade {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -1200%, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateZ(0);
-  }
 }
 
 .emergency {
@@ -1261,15 +1406,6 @@ header .carousel-control-next i {
   border: 2px solid #cccccc;
 }
 
-@keyframes itemHover {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
 .consultations {
   padding: 120px 0;
 }
@@ -1524,17 +1660,6 @@ header .carousel-control-next i {
 
 .consultations .appointment-form #submit-book:focus {
   outline: none;
-}
-
-@keyframes dropAnime {
-  0% {
-    transform: scale(0.7, 0.7) translate3d(-20px, 20px, 0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1, 1) translate3d(6px, 63px, 0);
-    opacity: 1;
-  }
 }
 
 @media only screen and (max-width: 991.98px) {
@@ -2565,15 +2690,6 @@ header .carousel-control-next i {
 .contact .content form .alert-box .comments {
   display: none;
   padding: 15px;
-}
-
-@keyframes buttonAnime {
-  from {
-    transform: rotate(0);
-  }
-  from {
-    transform: rotate(360deg);
-  }
 }
 
 footer {

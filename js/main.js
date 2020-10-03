@@ -1,4 +1,10 @@
 $(function () {
+  function pageLoad() {
+    $(window).on("load", function () {
+      $(".pageload").fadeOut();
+    });
+  }
+  pageLoad();
   function navBarResp() {
     // If the responsiveness is less then 991.98px it will open nav-items as dropdown. But you should reload page as soos as you change responsiveness
     function drophover() {
@@ -57,6 +63,27 @@ $(function () {
     });
   }
   navbarButton();
+  function fadeIn() {
+    let callOnce1 = true;
+    let callOnce2 = true;
+    let callOnce3 = true;
+    $(window).scroll(function () {
+      if (document.documentElement.scrollTop > 2590 && callOnce1) {
+        $(".appointment-form").addClass("animationRight");
+        callOnce1 = false;
+      }
+      if (document.documentElement.scrollTop > 4530 && callOnce2) {
+        $(".tab-content").addClass("animationUp");
+        callOnce2 = false;
+      }
+      if (document.documentElement.scrollTop > 7150 && callOnce3) {
+        $(".contact-animation1").addClass("animationDown");
+        $(".contact-animation2").addClass("animationUp");
+        callOnce3 = false;
+      }
+    });
+  }
+  fadeIn();
 
   function carousel1() {
     $(".owl-js1").owlCarousel({

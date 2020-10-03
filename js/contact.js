@@ -1,4 +1,10 @@
 $(function () {
+  function pageLoad() {
+    $(window).on("load", function () {
+      $(".pageload").fadeOut();
+    });
+  }
+  pageLoad();
   function navBarResp() {
     // If the responsiveness is less then 991.98px it will open nav-items as dropdown. But you should reload page as soos as you change responsiveness
     function drophover() {
@@ -23,6 +29,11 @@ $(function () {
     });
   }
   navBarResp();
+  function fadeIn() {
+    $(".contact-animation1").addClass("animationDown");
+    $(".contact-animation2").addClass("animationUp");
+  }
+  fadeIn();
   function navbarButton() {
     $(".navbar-toggler").click(function () {
       if (!$(".navbar-toggler").hasClass("collapsed")) {
