@@ -220,6 +220,67 @@
         }
       }
     }
+    // reply input style
+    .r-inp-holder {
+      width: 100%;
+      margin-left: 105px;
+      margin-bottom: 50px;
+      textarea {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        &:focus {
+          border-color: $mainCol;
+        }
+      }
+      .btn-holder {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          &:first-of-type {
+            background-color: transparent;
+            outline: none;
+            &:active {
+              outline: none;
+              background-color: rgb(240, 240, 240);
+              border: 1px solid #e7e7e7;
+              color: indianred;
+            }
+          }
+          &:last-of-type {
+            cursor: default;
+            border: 1px solid #e7e7e7;
+            background-color: rgb(220, 220, 220);
+            color: rgb(200, 200, 200);
+            outline: none;
+            &:active {
+              outline: none;
+            }
+          }
+          border: 1px solid transparent;
+          margin: 0 8px;
+          min-width: 90px;
+          display: inline-block;
+          font-size: 12px;
+          padding: 5px 10px;
+          text-transform: uppercase;
+          font-weight: 600;
+          transition: all 0.2s ease-in-out;
+        }
+        .btnActive {
+          cursor: pointer !important;
+          transition: 0.3s ease-in-out;
+          background-color: $mainCol !important;
+          color: white !important;
+          &:active {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
     .com-card {
       display: flex;
       margin-bottom: 50px;
@@ -280,11 +341,11 @@
             text-align: center;
           }
         }
-        .com-reply-btn {
+        .btn-box {
           @media only screen and (max-width: 479.98px) {
             text-align: center;
           }
-          button {
+          .com-reply-btn {
             background-color: white;
             border: 1px solid #e7e7e7;
             color: #002359;
@@ -297,6 +358,9 @@
             transition: all 0.35s ease-in-out;
             &:hover {
               color: $mainCol;
+            }
+            &:focus {
+              outline: none;
             }
             i {
               margin-right: 10px;
@@ -311,7 +375,7 @@
         padding: 0;
       }
     }
-    .comment-form {
+    .comment-form-part {
       .title {
         border-bottom: 1px solid #e7e7e7;
         margin-bottom: 30px;
@@ -343,6 +407,9 @@
         }
 
         #submit-form {
+          &:focus {
+            outline: none;
+          }
           background: linear-gradient(
             90deg,
             $mainCol 0%,

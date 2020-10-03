@@ -96,13 +96,8 @@ $(function () {
     document.querySelectorAll(".timer").forEach((element) => {
       let target = element.getAttribute("data-to");
       let speed = element.getAttribute("data-speed");
-      /* And we will get the number which shows how many we should increase for 1 second.
-    And i put it into the array */
       arr.push(target / speed);
     });
-    /*  Then i reloaded each function for every 100ms.And each reload time 
-    our number increases.I am not reloading functions each 1s.It is reloading each 100ms, 
-    that is why i divided each array item by 10. */
     let updateCount = () => {
       if (Math.ceil(count1) < $(".timer1").data("to")) {
         count1 = count1 + arr[0] / 10;

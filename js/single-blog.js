@@ -45,4 +45,139 @@ $(function () {
     });
   }
   navbarButton();
+  function blogComments() {
+    let monthNamesS = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    let commentArea = document.getElementById("textarea");
+    function replyComment(el) {
+      $(el).parents(
+        ".com-card"
+      ).after(`<div class="com-card reply"><div class="r-inp-holder"><textarea name="reply-inp"
+      placeholder="@${$(el)
+        .parent()
+        .siblings(".com-title")
+        .children("h5.first")
+        .text()}"
+      type="text" ></textarea>
+      <div class="col-12 btn-holder">
+      <button class="rp-cancel">Cancel</button>
+      <button class="rp-send">Send</button>
+      </div>
+      </div></div>`);
+      $(el).parents(".com-card").next().children().addClass("show");
+    }
+
+    $(".com-cards").on("click", ".com-reply-btn", function () {
+      let textarea = $(this).parents(".com-card").next().children("textarea");
+      if (!$(this).parents(".com-card").hasClass("reply")) {
+        if (!$(this).parents(".com-card").next().hasClass("show")) {
+          replyComment(this);
+
+          textarea.focus();
+        } else {
+          textarea.focus();
+          textarea.css("animation", "inpCol 0.5s");
+          setTimeout(() => {
+            $("textarea").removeAttr("style");
+          }, 300);
+        }
+      } else {
+        if (!$(this).parents(".com-card").next().hasClass("show")) {
+          replyComment(this);
+          $(this).parents(".com-card").next().css("margin-left", "185px");
+          textarea.focus();
+        } else {
+          textarea.focus();
+          textarea.css("animation", "inpCol 0.5s");
+          setTimeout(() => {
+            $("textarea").removeAttr("style");
+          }, 300);
+        }
+      }
+    });
+    $(".com-cards").on("keyup", "textarea", function () {
+      if (!($(this).val() == 0)) {
+        $(this).next().find(".rp-send").addClass("btnActive");
+        $(".rp-send").click(function () {});
+      } else {
+        $(this).next().find(".rp-send").removeClass("btnActive");
+      }
+    });
+    $(".com-cards").on("click", ".rp-cancel", function () {
+      $(this).parents(".com-card").remove();
+    });
+    $(".com-cards").on("click", ".rp-send", function () {
+      if (!($("[name='reply-inp']").val() == 0)) {
+        $(this)
+          .parents(".com-card")
+          .html(
+            `<div class="img-holder">
+        <img
+          class="img-fluid"
+          src="/images/User.png"
+          alt=""
+        />
+      </div>
+      <div class="com-content">
+        <div class="com-title">
+          <h5>Guest</h5>
+          <h5>${new Date().getDate()} ${
+              monthNamesS[new Date().getMonth()]
+            }, ${new Date().getFullYear()}</h5>
+        </div>
+        <div class="com-body">
+          <p>${$("[name='reply-inp']").val()}</p>
+        </div>
+        <div class="btn-box">
+          <button class="com-reply-btn"><i class="fa fa-reply"></i>REPLY</button>
+        </div>
+      </div>`
+          );
+      }
+    });
+    $("#comment-form").submit(function (e) {
+      let myCard = document.createElement("div");
+      e.preventDefault();
+      $(myCard).addClass("com-card");
+      $(myCard).html(
+        `<div class="img-holder">
+        <img
+          class="img-fluid"
+          src="/images/User.png"
+          alt=""
+        />
+      </div>
+      <div class="com-content">
+        <div class="com-title">
+          <h5>${$("[name='name']").val()}</h5>
+          <h5>${new Date().getDate()} ${
+          monthNamesS[new Date().getMonth()]
+        }, ${new Date().getFullYear()}</h5>
+        </div>
+        <div class="com-body">
+          <p>${$(".com-text").val()}</p>
+        </div>
+        <div class="btn-box">
+          <button class="com-reply-btn"><i class="fa fa-reply"></i>REPLY</button>
+        </div>
+      </div>`
+      );
+      $(".com-cards").prepend(myCard);
+      $("input").val("");
+      $(".com-text").val("");
+    });
+  }
+  blogComments();
 });
