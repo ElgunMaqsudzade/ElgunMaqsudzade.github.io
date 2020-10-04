@@ -1,10 +1,10 @@
+function pageLoad() {
+  $(window).on("load", function () {
+    $(".pageload").fadeOut();
+  });
+}
+pageLoad();
 $(function () {
-  function pageLoad() {
-    $(window).on("load", function () {
-      $(".pageload").fadeOut();
-    });
-  }
-  pageLoad();
   function navBarResp() {
     /* This is my last time which i am using fadeIn fadeOut width bootstrap dropdown.
     They are not going well with each other.  */
@@ -25,18 +25,18 @@ $(function () {
         if ($(".dropdown").hasClass("d-hover")) {
           $(this).find(".menu").fadeIn(300);
           $(this).find(".dropdown-box").fadeIn(100);
-        }else {
-          $(".menu").removeAttr("style")
-          $(".dropdown-menu").removeAttr("style")
+        } else {
+          $(".menu").removeAttr("style");
+          $(".dropdown-menu").removeAttr("style");
         }
       },
       function () {
         if ($(".dropdown").hasClass("d-hover")) {
           $(this).find(".menu").fadeOut(200);
           $(this).find(".dropdown-box").fadeOut(150);
-        }else {
-          $(".menu").removeAttr("style")
-          $(".dropdown-menu").removeAttr("style")
+        } else {
+          $(".menu").removeAttr("style");
+          $(".dropdown-menu").removeAttr("style");
         }
       }
     );

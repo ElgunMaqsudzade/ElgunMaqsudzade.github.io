@@ -131,13 +131,13 @@
         a {
           display: inline-block;
           font-weight: 800;
-          text-transform: capitalize;
           color: $mainCol;
           padding: 8px 30px;
           border: 2px solid;
           border-radius: 30px;
           @media only screen and (max-width: 479.98px) {
             margin: 5px;
+            font-size: 13px;
           }
           &:first-of-type {
             i {

@@ -1,10 +1,10 @@
+function pageLoad() {
+  $(window).on("load", function () {
+    $(".pageload").fadeOut();
+  });
+}
+pageLoad();
 $(function () {
-  function pageLoad() {
-    $(window).on("load", function () {
-      $(".pageload").fadeOut();
-    });
-  }
-  pageLoad();
   function navBarResp() {
     /* This is my last time which i am using fadeIn fadeOut width bootstrap dropdown.
     They are not going well with each other.  */

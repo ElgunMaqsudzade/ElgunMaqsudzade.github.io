@@ -5,7 +5,7 @@
   top: 0;
   height: 100vh;
   width: 100vw;
-  background: url(/images/preloader.gif) center no-repeat white;
+  background: url(../images/preloader.gif) center no-repeat white;
 }
 
 * {
@@ -1268,10 +1268,6 @@ header .carousel-control-next i {
   user-select: none;
 }
 
-.services-2 .carousel .owl-stage-outer {
-  padding: 15px;
-}
-
 .services-2 .carousel .owl-stage-outer .item {
   text-align: center;
   padding: 50px 30px 50px;
@@ -2031,7 +2027,7 @@ header .carousel-control-next i {
 
 .team {
   background-color: #f7f7f7;
-  padding: 120px 90px;
+  padding: 120px 0;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -3230,7 +3226,6 @@ footer .f-branches .branches ul li strong {
 .single-blog .blog-box .content .blog-nav a {
   display: inline-block;
   font-weight: 800;
-  text-transform: capitalize;
   color: #1ebeb6;
   padding: 8px 30px;
   border: 2px solid;
@@ -3240,6 +3235,7 @@ footer .f-branches .branches ul li strong {
 @media only screen and (max-width: 479.98px) {
   .single-blog .blog-box .content .blog-nav a {
     margin: 5px;
+    font-size: 13px;
   }
 }
 
