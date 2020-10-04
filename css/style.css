@@ -3480,6 +3480,10 @@ footer .f-branches .branches ul li strong {
   }
 }
 
+.single-blog .comments .com-card .com-content .com-body .suitable {
+  color: red;
+}
+
 @media only screen and (max-width: 479.98px) {
   .single-blog .comments .com-card .com-content .com-body {
     text-align: center;

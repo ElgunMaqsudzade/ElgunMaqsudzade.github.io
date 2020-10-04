@@ -337,6 +337,9 @@
           }
         }
         .com-body {
+          .suitable {
+            color: red;
+          }
           @media only screen and (max-width: 479.98px) {
             text-align: center;
           }

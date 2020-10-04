@@ -60,7 +60,15 @@ $(function () {
       "Nov",
       "Dec",
     ];
-    let commentArea = document.getElementById("textarea");
+    let set = true;
+    function setId() {
+      if (!localStorage.getItem("set")) {
+        set = false;
+        localStorage.setItem("userId", Math.random().toFixed(3) * 1000);
+        localStorage.setItem("set", set);
+      }
+    }
+    setId();
     function replyComment(el) {
       $(el).parents(
         ".com-card"
@@ -76,15 +84,14 @@ $(function () {
       <button class="rp-send">Send</button>
       </div>
       </div></div>`);
-      $(el).parents(".com-card").next().children().addClass("show");
+      $(el).parents(".com-card").next().addClass("show");
     }
 
     $(".com-cards").on("click", ".com-reply-btn", function () {
-      let textarea = $(this).parents(".com-card").next().children("textarea");
+      let textarea = $(this).parents(".com-card").next().find("textarea");
       if (!$(this).parents(".com-card").hasClass("reply")) {
         if (!$(this).parents(".com-card").next().hasClass("show")) {
           replyComment(this);
-
           textarea.focus();
         } else {
           textarea.focus();
@@ -96,7 +103,7 @@ $(function () {
       } else {
         if (!$(this).parents(".com-card").next().hasClass("show")) {
           replyComment(this);
-          $(this).parents(".com-card").next().css("margin-left", "185px");
+          $(this).parents(".com-card").next().addClass("reply");
           textarea.focus();
         } else {
           textarea.focus();
@@ -120,6 +127,7 @@ $(function () {
     });
     $(".com-cards").on("click", ".rp-send", function () {
       if (!($("[name='reply-inp']").val() == 0)) {
+        $(this).parents(".com-card").removeClass("show");
         $(this)
           .parents(".com-card")
           .html(
@@ -132,13 +140,20 @@ $(function () {
       </div>
       <div class="com-content">
         <div class="com-title">
-          <h5>Guest</h5>
+          <h5 class="first">Guest${localStorage.getItem("userId")}</h5>
           <h5>${new Date().getDate()} ${
               monthNamesS[new Date().getMonth()]
             }, ${new Date().getFullYear()}</h5>
         </div>
         <div class="com-body">
-          <p>${$("[name='reply-inp']").val()}</p>
+          <p><a class="suitable" href="#">@${$(this)
+            .parents(".com-card")
+            .prev()
+            .find("h5.first")
+            .text()}</a> ${$(this)
+              .parents(".r-inp-holder")
+              .find("[name='reply-inp']")
+              .val()}</p>
         </div>
         <div class="btn-box">
           <button class="com-reply-btn"><i class="fa fa-reply"></i>REPLY</button>
@@ -161,7 +176,7 @@ $(function () {
       </div>
       <div class="com-content">
         <div class="com-title">
-          <h5>${$("[name='name']").val()}</h5>
+          <h5 class="first">${$("[name='name']").val()}</h5>
           <h5>${new Date().getDate()} ${
           monthNamesS[new Date().getMonth()]
         }, ${new Date().getFullYear()}</h5>
