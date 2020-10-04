@@ -23,7 +23,6 @@ $(function () {
     $(".dropdown").hover(
       function () {
         if ($(".dropdown").hasClass("d-hover")) {
-          console.log("sagol");
           $(this).find(".menu").fadeIn(300);
           $(this).find(".dropdown-box").fadeIn(100);
         }else {

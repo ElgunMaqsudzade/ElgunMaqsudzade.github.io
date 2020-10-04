@@ -6,27 +6,40 @@ $(function () {
   }
   pageLoad();
   function navBarResp() {
-    // If the responsiveness is less then 991.98px it will open nav-items as dropdown. But you should reload page as soos as you change responsiveness
-    function drophover() {
-      $(".dropdown").hover(
-        function () {
-          $(this).find(".menu").fadeIn(300);
-          $(this).find(".dropdown-box").fadeIn(100);
-        },
-        function () {
-          $(this).find(".menu").fadeOut(200);
-          $(this).find(".dropdown-box").fadeOut(150);
-        }
-      );
-    }
-    if (!($(window).width() <= 991.98)) {
-      drophover();
+    /* This is my last time which i am using fadeIn fadeOut width bootstrap dropdown.
+    They are not going well with each other.  */
+    if (!($(window).width() <= 991)) {
+      $(".dropdown").addClass("d-hover");
+    } else {
+      $(".dropdown").removeClass("d-hover");
     }
     $(window).resize(function () {
-      if (!($(window).width() <= 991.98)) {
-        drophover();
+      if (!($(window).width() <= 991)) {
+        $(".dropdown").addClass("d-hover");
+      } else {
+        $(".dropdown").removeClass("d-hover");
       }
     });
+    $(".dropdown").hover(
+      function () {
+        if ($(".dropdown").hasClass("d-hover")) {
+          $(this).find(".menu").fadeIn(300);
+          $(this).find(".dropdown-box").fadeIn(100);
+        } else {
+          $(".menu").removeAttr("style");
+          $(".dropdown-menu").removeAttr("style");
+        }
+      },
+      function () {
+        if ($(".dropdown").hasClass("d-hover")) {
+          $(this).find(".menu").fadeOut(200);
+          $(this).find(".dropdown-box").fadeOut(150);
+        } else {
+          $(".menu").removeAttr("style");
+          $(".dropdown-menu").removeAttr("style");
+        }
+      }
+    );
   }
   navBarResp();
   function responseChooseUs() {
