@@ -163,35 +163,46 @@ $(function () {
       }
     });
     $("#comment-form").submit(function (e) {
-      let myCard = document.createElement("div");
       e.preventDefault();
-      $(myCard).addClass("com-card");
-      $(myCard).html(
-        `<div class="img-holder">
-        <img
-          class="img-fluid"
-          src="/images/User.png"
-          alt=""
-        />
-      </div>
-      <div class="com-content">
-        <div class="com-title">
-          <h5 class="first">${$("[name='name']").val()}</h5>
-          <h5>${new Date().getDate()} ${
-          monthNamesS[new Date().getMonth()]
-        }, ${new Date().getFullYear()}</h5>
+      if (!($(".com-text").val() == 0)) {
+        let myCard = document.createElement("div");
+        $(myCard).addClass("com-card");
+        $(myCard).html(
+          `<div class="img-holder">
+          <img
+            class="img-fluid"
+            src="/images/User.png"
+            alt=""
+          />
         </div>
-        <div class="com-body">
-          <p>${$(".com-text").val()}</p>
-        </div>
-        <div class="btn-box">
-          <button class="com-reply-btn"><i class="fa fa-reply"></i>REPLY</button>
-        </div>
-      </div>`
-      );
-      $(".com-cards").prepend(myCard);
-      $("input").val("");
-      $(".com-text").val("");
+        <div class="com-content">
+          <div class="com-title">
+            <h5 class="first">${$("[name='name']").val()}</h5>
+            <h5>${new Date().getDate()} ${
+            monthNamesS[new Date().getMonth()]
+          }, ${new Date().getFullYear()}</h5>
+          </div>
+          <div class="com-body">
+            <p>${$(".com-text").val()}</p>
+          </div>
+          <div class="btn-box">
+            <button class="com-reply-btn"><i class="fa fa-reply"></i>REPLY</button>
+          </div>
+        </div>`
+        );
+        $(".com-cards").prepend(myCard);
+        $("input").val("");
+        $(".com-text").val("");
+        myCard.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      } else {
+        $(".com-text").css("border-color", "red");
+        setTimeout(() => {
+          $(".com-text").css("border-color", "#e7e7e7");
+        }, 1000);
+      }
     });
   }
   blogComments();
