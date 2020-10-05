@@ -3319,7 +3319,7 @@ footer .f-branches .branches ul li strong {
   margin: 0;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767.98px) {
   .single-blog .comments .amount h4 {
     font-size: 18px;
   }
@@ -3329,6 +3329,12 @@ footer .f-branches .branches ul li strong {
   width: 100%;
   margin-left: 105px;
   margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 480px) {
+  .single-blog .comments .r-inp-holder {
+    margin-left: 0;
+  }
 }
 
 .single-blog .comments .r-inp-holder textarea {
