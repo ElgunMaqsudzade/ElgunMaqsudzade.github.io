@@ -1,0 +1,93 @@
+.pricing {
+  padding: 130px 0 180px 0;
+  .container {
+    .row {
+      .title {
+        @extend %title-part;
+        margin-bottom: 150px;
+      }
+      .pricing-card {
+          @media only screen and (max-width: 991px ){
+            margin-bottom: 30px;
+          }
+        padding: 50px 15px;
+        h5 {
+          font-size: 24px;
+          font-weight: 600;
+          letter-spacing: 2px;
+          margin: 0;
+        }
+        .price {
+          margin: 30px 0;
+          p {
+            margin: 0;
+            width: 100%;
+            span {
+              font-size: 80px;
+              color: black;
+            }
+          }
+          .time {
+            font-size: 13px;
+            width: 100%;
+            margin: 0;
+          }
+        }
+        ul {
+          padding: 0;
+          li {
+            margin: 0 0 12px;
+            font-size: 18px;
+          }
+        }
+        a {
+          @extend %btn-1;
+          border: 2px solid black;
+        }
+        a:hover {
+          opacity: 0.6;
+        }
+      }
+      .card-2 {
+        border: 2px solid black;
+        border-radius: 3px;
+      }
+      .card-3 {
+        border: 2px solid black;
+        background-color: black;
+        border-radius: 3px;
+        h5 {
+            color: white;
+          }
+          .price {
+            p {
+                color: white;
+              span {
+                color: white;
+              }
+            }
+            .time {
+                color: white;
+            }
+          }
+          ul {
+              li {
+                color: white;
+              }
+          }
+          a {
+            @extend %btn-1;
+            color: black;
+            background-color: white;
+            border: 2px solid white;
+            border-radius: 3px;
+          }
+          a:hover {
+            color: white;
+            background-color: black;
+            box-sizing: border-box!important;
+          }
+      }
+    }
+  }
+}

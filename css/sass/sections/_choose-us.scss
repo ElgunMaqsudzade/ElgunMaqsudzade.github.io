@@ -1,0 +1,76 @@
+.choose-us {
+  @media only screen and (max-width: 991.98px) {
+    padding-bottom: 120px;
+  }
+  @media only screen and (max-width: 767.98px) {
+    padding-bottom: 50px;
+  }
+  .info {
+    background-image: url(../images/choose-us/3.jpg);
+    background-position: center center !important;
+    background-size: cover !important;
+    @media only screen and (max-width: 991px) {
+      min-height: 300px;
+      margin: 0 15px;
+    }
+  }
+  .info2 {
+    padding: 120px 15px 120px 0;
+    @media only screen and (max-width: 991px) {
+      padding: 0 15px;
+    }
+    &::after {
+      @media only screen and (max-width: 991px) {
+        display: none;
+      }
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      background-image: url(../images/choose-us/dotted-shape.png);
+      background-repeat: no-repeat;
+      position: absolute;
+      height: 300px;
+      width: 300px;
+      opacity: 0.2;
+      z-index: -1;
+    }
+  }
+  .content {
+    padding: 80px 50px;
+    background: white;
+    box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.08);
+    position: relative;
+    left: -120px;
+    border-bottom: 3px solid $mainCol;
+    @media only screen and (max-width: 991px) {
+      padding: 50px 30px;
+      left: 0;
+    }
+    h5 {
+      color: $mainCol;
+      font-weight: 600;
+      margin-bottom: 25px;
+      @media only screen and (max-width: 767px) {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+    }
+    h2 {
+      color: $darkCol;
+      font-weight: 600;
+      margin-bottom: 25px;
+      @media only screen and (max-width: 767px) {
+        font-size: 26px;
+      }
+    }
+    p {
+      margin: 0 0 15px;
+    }
+    a {
+      @extend %main-buttons;
+    }
+  }
+}

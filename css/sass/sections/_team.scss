@@ -1,0 +1,99 @@
+.team {
+  background-color: #f7f7f7;
+  padding: 120px 0;
+  @media only screen and (max-width: 767.98px) {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  .content {
+    margin-bottom: 60px;
+    .first-divider {
+      @extend %divider;
+      width: 40px;
+    }
+    .second-divider {
+      @extend %divider;
+      width: 3px;
+    }
+    h4 {
+      color: $mainCol;
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+    h2 {
+      color: $darkCol;
+      font-weight: 600;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+      margin-top: 20px;
+      padding: 0 7%;
+    }
+  }
+  .team-card {
+    background-color: white;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .img-holder {
+      position: relative;
+      .contact {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        background: linear-gradient(
+          90deg,
+          rgba(30, 190, 182, 1) 0%,
+          rgba(0, 130, 124, 1) 100%
+        );
+        bottom: -25px;
+        padding: 10px 25px;
+        border-radius: 30px;
+        ul {
+          padding: 0;
+          margin: 0;
+          display: flex;
+          li {
+            margin: 0 5px;
+            position: relative;
+            z-index: 1;
+            padding: 0 5px;
+            &:not(:last-of-type) {
+              &::after {
+                content: "";
+                position: absolute;
+                right: -7px;
+                top: 5px;
+                height: 18px;
+                width: 1px;
+                background: rgba(255, 255, 255, 0.7);
+              }
+            }
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .info {
+      padding: 50px 30px 30px;
+      text-align: center;
+      h5 {
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: $darkCol;
+      }
+      p {
+        font-weight: 600;
+        color: $mainCol;
+        margin: 0;
+      }
+    }
+  }
+}

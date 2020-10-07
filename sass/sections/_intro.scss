@@ -1,0 +1,144 @@
+header {
+  background-image: url(../images/intro-bg.jpg);
+  height: 93vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 180px;
+    color: white;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 80px;
+    font-weight: 700;
+    color: white;
+  }
+  h3 {
+    color: white;
+    font-size: 24px;
+    margin: 30px 0;
+    padding: 0 80px;
+  }
+  .social-holder {
+    display: flex;
+    justify-content: center;
+    a {
+      .social1 {
+        text-align: center;
+        line-height: 35px;
+        font-size: 20px;
+        background-color: rgb(59, 89, 153);
+        height: 35px;
+        width: 35px;
+        .fab {
+          color: white;
+        }
+      }
+      .social2 {
+        text-align: center;
+        line-height: 35px;
+        font-size: 20px;
+        background-color: rgb(85, 172, 238);
+        height: 35px;
+        width: 35px;
+        .fab {
+          color: white;
+        }
+      }
+      .social3 {
+        text-align: center;
+        line-height: 35px;
+        background-color: rgb(205, 32, 31);
+        height: 35px;
+        width: 35px;
+        font-size: 20px;
+        .fab {
+          color: white;
+        }
+      }
+    }
+  }
+}
+.container-fluid {
+  .row {
+    nav {
+      @media only screen and (max-width: 991px) {
+        width: 100%;
+        justify-content: end;
+        align-items: center;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      padding: 0 !important;
+      height: 7vh;
+      .navbar-toggler {
+        @media only screen and (max-width: 565px) {
+          margin: 5px 0;
+        }
+        margin: 6px 0;
+        font-size: 16px;
+      }
+      ul {
+        @media only screen and (max-width: 991px) {
+          width: 100%;
+          background-color: white;
+          z-index: 100;
+        }
+        li {
+          padding: 0 40px;
+          a {
+            padding: 20px 0;
+            color: black;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    h1 {
+      font-size: 100px;
+    }
+
+    h2 {
+      font-size: 60px;
+    }
+    h3 {
+      font-size: 24px;
+      padding: 0;
+    }
+  }
+}
+@media only screen and (max-width: 575px) {
+  header {
+    h1 {
+      font-size: 85px;
+    }
+
+    h2 {
+      font-size: 50px;
+    }
+    h3 {
+      font-size: 20px;
+      padding: 0;
+    }
+  }
+}
+@media only screen and (max-width: 390px) {
+  header {
+    h3 {
+      font-size: 16px;
+    }
+  }
+}

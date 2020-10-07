@@ -1,0 +1,47 @@
+%main-buttons {
+  padding: 15px 25px;
+  display: inline-block;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  border-radius: 5px;
+  font-size: 17px;
+  margin-top: 15px;
+  margin-right: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(30, 190, 182, 1) 0%,
+    rgba(0, 130, 124, 1) 100%
+  );
+  transition: all 0.35s;
+  color: white;
+  @media only screen and (max-width: 767.98px) {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  @media only screen and (max-width: 575.98px) {
+    padding: 7px 13px;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  &:hover {
+    color: white;
+  }
+  i {
+    text-align: center;
+    height: 30px;
+    background: white;
+    color: $mainCol;
+    line-height: 30px !important;
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 0;
+    margin-right: 10px;
+    
+  }
+}
+%divider {
+  width: 30px;
+  border: 1px solid $mainCol;
+  display: inline-block;
+}

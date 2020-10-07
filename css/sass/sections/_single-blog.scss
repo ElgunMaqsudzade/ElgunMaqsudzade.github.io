@@ -1,0 +1,436 @@
+.single-blog {
+  padding: 120px 0;
+  @media only screen and (max-width: 767.98px) {
+    padding: 50px 0;
+  }
+  .blog-box {
+    box-shadow: 0 0 10px #e7e7e7;
+    .img-holder {
+      position: relative;
+      .post-date {
+        position: absolute;
+        text-align: center;
+        left: 30px;
+        bottom: 30px;
+        height: 70px;
+        width: 80px;
+        background: $mainCol;
+        color: white;
+        font-size: 16px;
+        padding: 0 20px;
+        line-height: 1.3;
+        font-weight: 600;
+        padding-top: 15px;
+        border-radius: 5px 5px 0 5px;
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: -10px;
+          border-right: 15px solid $mainCol;
+          border-top: 0;
+          border-bottom: 15px solid transparent;
+        }
+      }
+    }
+
+    .content {
+      background-color: white;
+      padding: 30px;
+      .blog-title {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 30px;
+        margin-bottom: 10px;
+        &:first-child {
+          position: relative;
+          &::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: "\f02c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 600;
+            color: #1ebeb6;
+          }
+        }
+        a {
+          color: #666666;
+          font-weight: 500;
+          i {
+            margin-right: 5px;
+            color: $mainCol;
+          }
+        }
+      }
+      .blog-body-content {
+        margin-bottom: 15px;
+        font-size: 22px;
+        color: $darkCol;
+        font-weight: 600;
+        @media only screen and (max-width: 767.98px) {
+          font-size: 18px;
+        }
+      }
+      p {
+        margin: 0 0 15px;
+        font-weight: 400;
+      }
+      blockquote {
+        font-style: italic;
+        padding: 100px 30px 50px 30px;
+        margin: 30px 0;
+        font-size: 18px;
+        background: #f7f7f7;
+        border-left: 3px solid $mainCol;
+        position: relative;
+        &::after {
+          content: "";
+          color: $mainCol;
+          content: "\f10d";
+          position: absolute;
+          font-family: "Font Awesome 5 Free";
+          color: #1ebeb6;
+          font-size: 40px;
+          left: 30px;
+          top: 50px;
+          font-weight: 600;
+        }
+      }
+      ul {
+        padding: 0;
+        margin: 25px 0;
+        li {
+          padding-left: 18px;
+          margin-bottom: 15px;
+          position: relative;
+          color: $darkCol;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 7px;
+            width: 7px;
+            background-color: #666666;
+            border-radius: 50%;
+            z-index: 10;
+          }
+        }
+      }
+      .blog-nav {
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: 479.98px) {
+          margin: 5px;
+          flex-direction: column;
+          align-items: center;
+        }
+        margin-top: 15px;
+        a {
+          display: inline-block;
+          font-weight: 800;
+          color: $mainCol;
+          padding: 8px 30px;
+          border: 2px solid;
+          border-radius: 30px;
+          @media only screen and (max-width: 479.98px) {
+            margin: 5px;
+            font-size: 13px;
+          }
+          &:first-of-type {
+            i {
+              margin-right: 5px;
+            }
+          }
+          &:last-of-type {
+            i {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .share-content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: 767.98px) {
+      justify-content: start;
+      flex-direction: column;
+    }
+    align-items: center;
+    .tags {
+      a {
+        background: #f7f7f7;
+        padding: 10px 15px;
+        font-size: 14px;
+        margin-right: 3px;
+        margin-bottom: 5px;
+        display: inline-block;
+        color: $darkCol;
+        font-weight: 700;
+      }
+    }
+    .social {
+      ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        li {
+          margin: 0 8px;
+          font-size: 15px;
+          a {
+            .fa-facebook-f {
+              font-weight: 700;
+              color: #3b5998;
+            }
+            .fa-twitter {
+              font-weight: 700;
+              color: #1da1f2;
+            }
+            .fa-pinterest-p {
+              font-weight: 700;
+              color: #bd081c;
+            }
+            .fa-linkedin-in {
+              font-weight: 700;
+              color: #007bb5;
+            }
+          }
+        }
+      }
+    }
+  }
+  .comments {
+    margin-top: 40px;
+    .amount {
+      border-bottom: 1px solid #e2e2e2;
+      margin-bottom: 30px;
+      padding-bottom: 25px;
+
+      h4 {
+        color: $darkCol;
+        font-weight: 700;
+        margin: 0;
+        @media only screen and (max-width: 767.98px) {
+          font-size: 18px;
+        }
+      }
+    }
+    // reply input style
+    .r-inp-holder {
+      width: 100%;
+      margin-left: 105px;
+      @media only screen and (max-width: 480px) {
+        margin-left: 0;
+      }
+      margin-bottom: 50px;
+      textarea {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        &:focus {
+          border-color: $mainCol;
+        }
+      }
+      .btn-holder {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          &:first-of-type {
+            background-color: transparent;
+            outline: none;
+            &:active {
+              outline: none;
+              background-color: rgb(240, 240, 240);
+              border: 1px solid #e7e7e7;
+              color: indianred;
+            }
+          }
+          &:last-of-type {
+            cursor: default;
+            border: 1px solid #e7e7e7;
+            background-color: rgb(220, 220, 220);
+            color: rgb(200, 200, 200);
+            outline: none;
+            &:active {
+              outline: none;
+            }
+          }
+          border: 1px solid transparent;
+          margin: 0 8px;
+          min-width: 90px;
+          display: inline-block;
+          font-size: 12px;
+          padding: 5px 10px;
+          text-transform: uppercase;
+          font-weight: 600;
+          transition: all 0.2s ease-in-out;
+        }
+        .btnActive {
+          cursor: pointer !important;
+          transition: 0.3s ease-in-out;
+          background-color: $mainCol !important;
+          color: white !important;
+          &:active {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    .com-card {
+      display: flex;
+      margin-bottom: 50px;
+      @media only screen and (max-width: 767.98px) {
+        margin-bottom: 30px;
+      }
+      @media only screen and (max-width: 479.98px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      .img-holder {
+        margin-right: 25px;
+        max-height: 80px;
+        max-width: 80px;
+        @media only screen and (max-width: 479.98px) {
+          margin-bottom: 25px;
+          margin-right: 0;
+        }
+      }
+      .com-content {
+        @media only screen and (max-width: 479.98px) {
+          align-items: center;
+        }
+        .com-title {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+          @media only screen and (max-width: 767.98px) {
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-direction: column;
+          }
+          @media only screen and (max-width: 479.98px) {
+            align-items: center;
+          }
+          h5 {
+            display: inline-block;
+            color: $darkCol;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 0;
+            &:last-of-type {
+              border-left: 1px solid #e7e7e7;
+              padding-left: 15px;
+              margin-left: 15px;
+              color: #666666;
+              @media only screen and (max-width: 767.98px) {
+                padding: 0;
+                margin: 0;
+                margin-top: 20px;
+                border: none;
+              }
+            }
+          }
+        }
+        .com-body {
+          .suitable {
+            color: red;
+          }
+          @media only screen and (max-width: 479.98px) {
+            text-align: center;
+          }
+        }
+        .btn-box {
+          @media only screen and (max-width: 479.98px) {
+            text-align: center;
+          }
+          .com-reply-btn {
+            background-color: white;
+            border: 1px solid #e7e7e7;
+            color: #002359;
+            display: inline-block;
+            font-size: 12px;
+            margin-top: 5px;
+            padding: 1px 10px;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: all 0.35s ease-in-out;
+            &:hover {
+              color: $mainCol;
+            }
+            &:focus {
+              outline: none;
+            }
+            i {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+    .reply {
+      padding-left: 80px;
+      @media only screen and (max-width: 767.98px) {
+        padding: 0;
+      }
+    }
+    .comment-form-part {
+      .title {
+        border-bottom: 1px solid #e7e7e7;
+        margin-bottom: 30px;
+        padding-bottom: 25px;
+        h4 {
+          color: $darkCol;
+          font-weight: 700;
+          font-size: 22px;
+          @media only screen and (max-width: 767.98px) {
+            font-size: 18px;
+          }
+        }
+      }
+      form {
+        input {
+          border: none;
+          border-radius: 0;
+          border-bottom: 1px solid #e7e7e7;
+        }
+        .type-area {
+          margin: 20px 0;
+          textarea {
+            border: none;
+            padding: 15px;
+            border-radius: 0;
+            min-height: 180px;
+            border-bottom: 1px solid #e7e7e7;
+          }
+        }
+
+        #submit-form {
+          &:focus {
+            outline: none;
+          }
+          background: linear-gradient(
+            90deg,
+            $mainCol 0%,
+            rgba(0, 130, 124, 1) 100%
+          );
+          border: 1px solid $mainCol;
+          line-height: 25px;
+          color: white;
+          display: inline-block;
+          font-weight: 700;
+          margin-top: 20px;
+          padding: 15px 45px;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+}
