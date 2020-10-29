@@ -1,11 +1,10 @@
-
-  function pageLoad() {
-    $(window).on("load", function () {
-      $(".pageload").fadeOut();
-    });
-  }
-  pageLoad();
-$(function () {
+function pageLoad() {
+  $(window).on("load", function() {
+    $(".pageload").fadeOut();
+  });
+}
+pageLoad();
+$(function() {
   function navBarResp() {
     /* This is my last time which i am using fadeIn fadeOut width bootstrap dropdown.
     They are not going well with each other.  */
@@ -14,7 +13,7 @@ $(function () {
     } else {
       $(".dropdown").removeClass("d-hover");
     }
-    $(window).resize(function () {
+    $(window).resize(function() {
       if (!($(window).width() <= 991)) {
         $(".dropdown").addClass("d-hover");
       } else {
@@ -22,19 +21,27 @@ $(function () {
       }
     });
     $(".dropdown").hover(
-      function () {
+      function() {
         if ($(".dropdown").hasClass("d-hover")) {
-          $(this).find(".menu").fadeIn(300);
-          $(this).find(".dropdown-box").fadeIn(100);
+          $(this)
+            .find(".menu")
+            .fadeIn(300);
+          $(this)
+            .find(".dropdown-box")
+            .fadeIn(100);
         } else {
           $(".menu").removeAttr("style");
           $(".dropdown-menu").removeAttr("style");
         }
       },
-      function () {
+      function() {
         if ($(".dropdown").hasClass("d-hover")) {
-          $(this).find(".menu").fadeOut(200);
-          $(this).find(".dropdown-box").fadeOut(150);
+          $(this)
+            .find(".menu")
+            .fadeOut(200);
+          $(this)
+            .find(".dropdown-box")
+            .fadeOut(150);
         } else {
           $(".menu").removeAttr("style");
           $(".dropdown-menu").removeAttr("style");
@@ -48,13 +55,21 @@ $(function () {
   }
   fadeIn();
   function navbarButton() {
-    $(".navbar-toggler").click(function () {
+    $(".navbar-toggler").click(function() {
       if (!$(".navbar-toggler").hasClass("collapsed")) {
-        $(this).children().removeClass("fa-times");
-        $(this).children().addClass("fa-bars");
+        $(this)
+          .children()
+          .removeClass("fa-times");
+        $(this)
+          .children()
+          .addClass("fa-bars");
       } else {
-        $(this).children().removeClass("fa-bars");
-        $(this).children().addClass("fa-times");
+        $(this)
+          .children()
+          .removeClass("fa-bars");
+        $(this)
+          .children()
+          .addClass("fa-times");
       }
     });
   }
@@ -72,7 +87,7 @@ $(function () {
       "Sep",
       "Oct",
       "Nov",
-      "Dec",
+      "Dec"
     ];
     let set = true;
     function setId() {
@@ -98,13 +113,28 @@ $(function () {
       <button class="rp-send">Send</button>
       </div>
       </div></div>`);
-      $(el).parents(".com-card").next().addClass("show");
+      $(el)
+        .parents(".com-card")
+        .next()
+        .addClass("show");
     }
 
-    $(".com-cards").on("click", ".com-reply-btn", function () {
-      let textarea = $(this).parents(".com-card").next().find("textarea");
-      if (!$(this).parents(".com-card").hasClass("reply")) {
-        if (!$(this).parents(".com-card").next().hasClass("show")) {
+    $(".com-cards").on("click", ".com-reply-btn", function() {
+      let textarea = $(this)
+        .parents(".com-card")
+        .next()
+        .find("textarea");
+      if (
+        !$(this)
+          .parents(".com-card")
+          .hasClass("reply")
+      ) {
+        if (
+          !$(this)
+            .parents(".com-card")
+            .next()
+            .hasClass("show")
+        ) {
           replyComment(this);
           textarea.focus();
         } else {
@@ -115,9 +145,17 @@ $(function () {
           }, 300);
         }
       } else {
-        if (!$(this).parents(".com-card").next().hasClass("show")) {
+        if (
+          !$(this)
+            .parents(".com-card")
+            .next()
+            .hasClass("show")
+        ) {
           replyComment(this);
-          $(this).parents(".com-card").next().addClass("reply");
+          $(this)
+            .parents(".com-card")
+            .next()
+            .addClass("reply");
           textarea.focus();
         } else {
           textarea.focus();
@@ -128,20 +166,30 @@ $(function () {
         }
       }
     });
-    $(".com-cards").on("keyup", "textarea", function () {
+    $(".com-cards").on("keyup", "textarea", function() {
       if (!($(this).val() == 0)) {
-        $(this).next().find(".rp-send").addClass("btnActive");
-        $(".rp-send").click(function () {});
+        $(this)
+          .next()
+          .find(".rp-send")
+          .addClass("btnActive");
+        $(".rp-send").click(function() {});
       } else {
-        $(this).next().find(".rp-send").removeClass("btnActive");
+        $(this)
+          .next()
+          .find(".rp-send")
+          .removeClass("btnActive");
       }
     });
-    $(".com-cards").on("click", ".rp-cancel", function () {
-      $(this).parents(".com-card").remove();
+    $(".com-cards").on("click", ".rp-cancel", function() {
+      $(this)
+        .parents(".com-card")
+        .remove();
     });
-    $(".com-cards").on("click", ".rp-send", function () {
+    $(".com-cards").on("click", ".rp-send", function() {
       if (!($("[name='reply-inp']").val() == 0)) {
-        $(this).parents(".com-card").removeClass("show");
+        $(this)
+          .parents(".com-card")
+          .removeClass("show");
         $(this)
           .parents(".com-card")
           .html(
@@ -176,7 +224,7 @@ $(function () {
           );
       }
     });
-    $("#comment-form").submit(function (e) {
+    $("#comment-form").submit(function(e) {
       e.preventDefault();
       if (!($(".com-text").val() == 0)) {
         let myCard = document.createElement("div");
@@ -209,7 +257,7 @@ $(function () {
         $(".com-text").val("");
         myCard.scrollIntoView({
           behavior: "smooth",
-          block: "center",
+          block: "center"
         });
       } else {
         $(".com-text").css("border-color", "red");
